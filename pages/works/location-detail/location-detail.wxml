@@ -1,0 +1,5 @@
+<!--location-detail.wxml-->
+<view class="container">
+  <view class="page-title">{{name}}风光</view>
+  <view class="placeholder">正在加载...</view>
+</view> 

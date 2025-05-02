@@ -1,0 +1,16 @@
+﻿/* ps-magic.wxss */
+.container {
+  padding: 30rpx;
+}
+
+.page-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+
+.placeholder {
+  text-align: center;
+  color: #999;
+  padding: 100rpx 0;
+}

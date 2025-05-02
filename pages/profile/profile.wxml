@@ -1,0 +1,84 @@
+<!--profile.wxml-->
+<view class="container">
+  <!-- 用户信息区域 -->
+  <view class="user-info-section">
+    <view class="user-info-wrapper" wx:if="{{hasUserInfo}}">
+      <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+      <view class="user-info">
+        <view class="nickname">{{userInfo.nickName}}</view>
+        <view class="user-id">ID: haifon{{10000 + statistics.likes + statistics.collections}}</view>
+      </view>
+    </view>
+    
+    <view class="login-wrapper" wx:else>
+      <image class="default-avatar" src="/images/default-avatar.png"></image>
+      <view class="login-tips">登录后使用完整功能</view>
+      
+      <button wx:if="{{canIUseGetUserProfile}}" 
+              class="login-btn" 
+              bind:tap="getUserProfile">
+        点击登录
+      </button>
+      <button wx:else 
+              class="login-btn" 
+              open-type="getUserInfo" 
+              bindgetuserinfo="getUserInfo">
+        点击登录
+      </button>
+    </view>
+    
+    <!-- 用户统计信息 -->
+    <view class="user-statistics">
+      <view class="stat-item">
+        <view class="stat-num">{{statistics.likes}}</view>
+        <view class="stat-label">点赞</view>
+      </view>
+      <view class="stat-divider"></view>
+      <view class="stat-item">
+        <view class="stat-num">{{statistics.collections}}</view>
+        <view class="stat-label">收藏</view>
+      </view>
+      <view class="stat-divider"></view>
+      <view class="stat-item">
+        <view class="stat-num">{{statistics.shares}}</view>
+        <view class="stat-label">分享</view>
+      </view>
+      <view class="stat-divider"></view>
+      <view class="stat-item">
+        <view class="stat-num">{{statistics.comments}}</view>
+        <view class="stat-label">评论</view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 我的互动区域 -->
+  <view class="section-title">浏览与收藏</view>
+  <view class="actions-list">
+    <block wx:for="{{actionsList}}" wx:key="text">
+      <view class="action-item" bind:tap="navigateTo" data-path="{{item.path}}">
+        <image class="action-icon" src="{{item.icon}}"></image>
+        <text class="action-text">{{item.text}}</text>
+        <view class="arrow-right"></view>
+      </view>
+    </block>
+  </view>
+  
+  <!-- 设置区域 -->
+  <view class="section-title">设置</view>
+  <view class="settings-list">
+    <block wx:for="{{settingsList}}" wx:key="text">
+      <view class="setting-item" 
+            bind:tap="{{item.text === '联系客服' ? 'contactCustomerService' : 'navigateTo'}}" 
+            data-path="{{item.path}}">
+        <image class="setting-icon" src="{{item.icon}}"></image>
+        <text class="setting-text">{{item.text}}</text>
+        <view class="arrow-right"></view>
+      </view>
+    </block>
+  </view>
+  
+  <!-- 版本信息 -->
+  <view class="version-info">
+    <text>海风影像馆 v1.0.0</text>
+  </view>
+</view> 

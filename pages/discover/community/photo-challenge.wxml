@@ -1,0 +1,5 @@
+﻿<!--photo-challenge.wxml-->
+<view class="container">
+  <view class="page-title">Photo Challenge</view>
+  <view class="placeholder">寮€鍙戜腑...</view>
+</view>

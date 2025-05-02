@@ -1,0 +1,5 @@
+﻿<!--collections.wxml-->
+<view class="container">
+  <view class="page-title">Collections</view>
+  <view class="placeholder">寮€鍙戜腑...</view>
+</view>

@@ -1,0 +1,8 @@
+﻿<!--contact.wxml-->
+<view class="container">
+  <view class="page-title">联系客服</view>
+  <view class="qr-section">
+    <image class="qr-image" src="/images/customer-service-qr.jpg" mode="aspectFit"></image>
+    <view class="qr-desc">长按识别二维码，添加客服微信</view>
+  </view>
+</view>

@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/works/works",
+    "pages/discover/discover",
+    "pages/profile/profile",
+    "pages/works/work-detail/work-detail",
+    "pages/works/theme-detail/theme-detail",
+    "pages/works/year-detail/year-detail",
+    "pages/works/location-detail/location-detail",
+    "pages/discover/wiki/equipment",
+    "pages/discover/wiki/light-lab",
+    "pages/discover/course/mobile-photo",
+    "pages/discover/course/ps-magic",
+    "pages/discover/community/photo-contest",
+    "pages/discover/community/photo-challenge",
+    "pages/profile/likes/likes",
+    "pages/profile/collections/collections",
+    "pages/profile/shares/shares",
+    "pages/profile/comments/comments",
+    "pages/profile/settings/privacy",
+    "pages/profile/contact/contact",
+    "pages/profile/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "海风影像馆",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#000000",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/works/works",
+        "text": "作品",
+        "iconPath": "images/icons/examples.png",
+        "selectedIconPath": "images/icons/examples-active.png"
+      },
+      {
+        "pagePath": "pages/discover/discover",
+        "text": "发现",
+        "iconPath": "images/icons/discover.png",
+        "selectedIconPath": "images/icons/discover-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/icons/usercenter.png",
+        "selectedIconPath": "images/icons/usercenter-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "permission": {
+    "scope.userInfo": {
+      "desc": "用于个性化展示您的互动内容"
+    }
+  }
+} 

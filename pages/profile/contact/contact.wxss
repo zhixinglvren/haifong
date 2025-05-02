@@ -1,0 +1,44 @@
+﻿/* contact.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background: #fff;
+  padding-top: 80rpx;
+}
+
+.page-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #1296db;
+  margin-bottom: 40rpx;
+}
+
+.qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.qr-image {
+  width: 340rpx;
+  height: 340rpx;
+  border-radius: 24rpx;
+  box-shadow: 0 8rpx 32rpx rgba(18,150,219,0.08);
+  margin-bottom: 30rpx;
+}
+
+.qr-desc {
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+}
+
+.placeholder {
+  text-align: center;
+  color: #999;
+  padding: 100rpx 0;
+}

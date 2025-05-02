@@ -1,0 +1,150 @@
+/* profile.wxss */
+.container {
+  padding-bottom: 40rpx;
+}
+
+/* 用户信息区域 */
+.user-info-section {
+  background-color: #fff;
+  padding: 40rpx 30rpx;
+  margin-bottom: 30rpx;
+  border-radius: 0 0 20rpx 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+.user-info-wrapper, .login-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.avatar, .default-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+  background-color: #f0f0f0;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.nickname {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.user-id {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.login-tips {
+  font-size: 32rpx;
+  color: #666;
+  flex: 1;
+}
+
+.login-btn {
+  padding: 12rpx 30rpx;
+  font-size: 28rpx;
+  background-color: #1296db;
+  color: #fff;
+  border-radius: 30rpx;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 用户统计信息 */
+.user-statistics {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  border-top: 1rpx solid #eee;
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-divider {
+  width: 1rpx;
+  height: 50rpx;
+  background-color: #eee;
+  margin: 10rpx 0;
+}
+
+.stat-num {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 6rpx;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 模块标题 */
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin: 30rpx 30rpx 20rpx;
+}
+
+/* 操作列表 */
+.actions-list, .settings-list {
+  background-color: #fff;
+  border-radius: 16rpx;
+  margin: 0 30rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+.action-item, .setting-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.action-item:last-child, .setting-item:last-child {
+  border-bottom: none;
+}
+
+.action-icon, .setting-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.action-text, .setting-text {
+  flex: 1;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.arrow-right {
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 4rpx solid #ccc;
+  border-right: 4rpx solid #ccc;
+  transform: rotate(45deg);
+  margin-left: 10rpx;
+}
+
+/* 版本信息 */
+.version-info {
+  text-align: center;
+  margin-top: 60rpx;
+  font-size: 24rpx;
+  color: #999;
+} 

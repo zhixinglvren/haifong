@@ -1,0 +1,67 @@
+<!--discover.wxml-->
+<view class="container">
+  <!-- 摄影百科 -->
+  <view class="section-header">
+    <text class="section-title">摄影百科</text>
+    <text class="section-subtitle">专业摄影知识库</text>
+  </view>
+  
+  <view class="wiki-list">
+    <block wx:for="{{wikiData}}" wx:key="id">
+      <view class="wiki-item" bind:tap="navigateTo" data-path="{{item.path}}">
+        <image src="{{item.icon}}" class="wiki-icon"></image>
+        <view class="wiki-info">
+          <view class="wiki-title">{{item.title}}</view>
+          <view class="wiki-desc">{{item.desc}}</view>
+        </view>
+        <view class="arrow-right"></view>
+      </view>
+    </block>
+  </view>
+  
+  <!-- 教程专栏 -->
+  <view class="section-header">
+    <text class="section-title">教程专栏</text>
+    <text class="section-subtitle">从入门到专业</text>
+  </view>
+  
+  <view class="course-list">
+    <block wx:for="{{courseData}}" wx:key="id">
+      <view class="course-item" bind:tap="navigateTo" data-path="{{item.path}}">
+        <image src="{{item.cover}}" class="course-image" mode="aspectFill"></image>
+        <view class="course-info">
+          <view class="course-title">{{item.title}}</view>
+          <view class="course-desc">{{item.desc}}</view>
+          <view class="course-progress-container" wx:if="{{item.progress > 0}}">
+            <view class="course-progress-bar" style="width: {{item.progress}}%"></view>
+            <text class="course-progress-text">{{item.progress}}%</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  
+  <!-- 互动社区 -->
+  <view class="section-header">
+    <text class="section-title">互动社区</text>
+    <text class="section-subtitle">分享、挑战、成长</text>
+  </view>
+  
+  <view class="community-list">
+    <block wx:for="{{communityData}}" wx:key="id">
+      <view class="community-item" bind:tap="navigateTo" data-path="{{item.path}}">
+        <image src="{{item.cover}}" class="community-image" mode="aspectFill"></image>
+        <view class="community-overlay"></view>
+        <view class="community-info">
+          <view class="community-title">{{item.title}}</view>
+          <view class="community-desc">{{item.desc}}</view>
+          <view class="community-participants">
+            <text class="participants-count">{{item.participants}}</text>
+            <text class="participants-label">人参与</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+ 

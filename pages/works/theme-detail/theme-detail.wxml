@@ -1,0 +1,41 @@
+<!--theme-detail.wxml-->
+<view class="container">
+  <!-- 主题标题 -->
+  <view class="theme-header">
+    <view class="theme-title">{{name}}</view>
+    <view class="theme-count">{{works.length}} 张作品</view>
+  </view>
+  
+  <!-- 加载状态 -->
+  <view class="loading-container" wx:if="{{isLoading}}">
+    <view class="loading"></view>
+  </view>
+  
+  <!-- 作品列表 -->
+  <view class="works-list" wx:else>
+    <block wx:for="{{works}}" wx:key="id">
+      <view class="work-item" bind:tap="onWorkTap" data-id="{{item.id}}">
+        <image src="{{item.imageUrl}}" mode="aspectFill" class="work-image"></image>
+        <view class="work-info">
+          <view class="work-title">{{item.title}}</view>
+          <view class="work-stats">
+            <view class="stat-item">
+              <image src="/images/icon-like.png" class="stat-icon"></image>
+              <text class="stat-count">{{item.likes}}</text>
+            </view>
+            <view class="stat-item">
+              <image src="/images/icon-collection.png" class="stat-icon"></image>
+              <text class="stat-count">{{item.collections}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  
+  <!-- 空状态 -->
+  <view class="empty-state" wx:if="{{!isLoading && works.length === 0}}">
+    <image src="/images/icon-empty.png" class="empty-icon"></image>
+    <text class="empty-text">暂无作品</text>
+  </view>
+</view> 

@@ -1,0 +1,70 @@
+<!--works.wxml-->
+<view class="container">
+  <!-- 顶部导航标签 -->
+  <view class="tabs">
+    <block wx:for="{{tabs}}" wx:key="*this">
+      <view class="tab-item {{activeTab === index ? 'active' : ''}}" 
+            bind:tap="switchTab" 
+            data-index="{{index}}">
+        {{item}}
+        <view class="tab-line" wx:if="{{activeTab === index}}"></view>
+      </view>
+    </block>
+  </view>
+  
+  <!-- 主题分类内容 -->
+  <view class="tab-content" hidden="{{activeTab !== 0}}">
+    <view class="theme-list">
+      <block wx:for="{{themeList}}" wx:key="id">
+        <view class="theme-item" 
+              bind:tap="navigateToThemeDetail" 
+              data-id="{{item.id}}" 
+              data-name="{{item.name}}">
+          <image src="{{item.cover}}" mode="aspectFill" class="theme-image"></image>
+          <view class="theme-overlay"></view>
+          <view class="theme-info">
+            <view class="theme-name">{{item.name}}</view>
+            <view class="theme-count">{{item.count}}张作品</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  
+  <!-- 时光机内容 -->
+  <view class="tab-content" hidden="{{activeTab !== 1}}">
+    <view class="year-list">
+      <block wx:for="{{yearList}}" wx:key="year">
+        <view class="year-item" 
+              bind:tap="navigateToYearDetail" 
+              data-year="{{item.year}}">
+          <image src="{{item.cover}}" mode="aspectFill" class="year-image"></image>
+          <view class="year-overlay"></view>
+          <view class="year-info">
+            <view class="year-name">{{item.year}}</view>
+            <view class="year-count">{{item.count}}张作品</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  
+  <!-- 城市印象内容 -->
+  <view class="tab-content" hidden="{{activeTab !== 2}}">
+    <view class="location-list">
+      <block wx:for="{{locationList}}" wx:key="id">
+        <view class="location-item" 
+              bind:tap="navigateToLocationDetail" 
+              data-id="{{item.id}}" 
+              data-name="{{item.name}}">
+          <image src="{{item.cover}}" mode="aspectFill" class="location-image"></image>
+          <view class="location-overlay"></view>
+          <view class="location-info">
+            <view class="location-name">{{item.name}}</view>
+            <view class="location-count">{{item.count}}张作品</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view> 

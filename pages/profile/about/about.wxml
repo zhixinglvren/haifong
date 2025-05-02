@@ -1,0 +1,5 @@
+﻿<!--about.wxml-->
+<view class="container">
+  <view class="page-title">About</view>
+  <view class="placeholder">寮€鍙戜腑...</view>
+</view>

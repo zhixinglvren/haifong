@@ -1,0 +1,107 @@
+/* works.wxss */
+.container {
+  padding: 0;
+}
+
+/* 标签页样式 */
+.tabs {
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.tab-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  color: #666;
+  position: relative;
+}
+
+.tab-item.active {
+  color: #1296db;
+  font-weight: bold;
+}
+
+.tab-line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60rpx;
+  height: 6rpx;
+  background-color: #1296db;
+  border-radius: 6rpx;
+}
+
+.tab-content {
+  margin-top: 100rpx;
+  padding: 20rpx;
+}
+
+/* 主题分类样式 */
+.theme-list, .year-list, .location-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+}
+
+.theme-item, .year-item, .location-item {
+  position: relative;
+  width: 100%;
+  height: 300rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+}
+
+.theme-image, .year-image, .location-image {
+  width: 100%;
+  height: 100%;
+}
+
+.theme-overlay, .year-overlay, .location-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+}
+
+.theme-info, .year-info, .location-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30rpx;
+  color: #fff;
+}
+
+.theme-name, .location-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+
+.year-name {
+  font-size: 48rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+
+.theme-count, .year-count, .location-count {
+  font-size: 28rpx;
+  opacity: 0.9;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.5);
+} 

@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 轮播图区域 -->
+  <view class="banner-section">
+    <swiper class="banner-swiper" indicator-dots="{{indicatorDots}}" 
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+            circular="{{circular}}">
+      <block wx:for="{{bannerList}}" wx:key="id">
+        <swiper-item class="banner-item" bind:tap="onBannerTap" data-id="{{item.id}}">
+          <image src="{{item.imageUrl}}" class="banner-image" mode="aspectFill"></image>
+          <view class="banner-title">{{item.title}}</view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  
+  <!-- 视频号入口 -->
+  <view class="video-channel-section">
+    <view class="section-title">热门内容</view>
+    <view class="video-channel-btn" bind:tap="navigateToVideoChannel">
+      <image src="/images/video-icon.png" class="video-icon"></image>
+      <text>前往「海风影像馆」视频号</text>
+    </view>
+  </view>
+  
+  <!-- 摄影热点 -->
+  <view class="hot-topics-section">
+    <view class="section-title">摄影热点</view>
+    <view class="hot-topics-list">
+      <view class="hot-topic-item card">
+        <image src="/images/topic1.jpg" class="topic-image" mode="aspectFill"></image>
+        <view class="topic-info">
+          <view class="topic-title">如何拍出大片感人像</view>
+          <view class="topic-desc">简单3步，手机也能拍出高级感</view>
+        </view>
+      </view>
+      <view class="hot-topic-item card">
+        <image src="/images/topic2.jpg" class="topic-image" mode="aspectFill"></image>
+        <view class="topic-info">
+          <view class="topic-title">城市光影捕捉技巧</view>
+          <view class="topic-desc">夜晚城市的独特魅力</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 推荐作品 -->
+  <view class="recommend-section">
+    <view class="section-title">精选推荐</view>
+    <view class="recommend-grid">
+      <view class="recommend-item">
+        <image src="/images/recommend1.jpg" mode="aspectFill" class="recommend-image"></image>
+        <view class="recommend-title">雨后巷弄</view>
+      </view>
+      <view class="recommend-item">
+        <image src="/images/recommend2.jpg" mode="aspectFill" class="recommend-image"></image>
+        <view class="recommend-title">山间清晨</view>
+      </view>
+      <view class="recommend-item">
+        <image src="/images/recommend3.jpg" mode="aspectFill" class="recommend-image"></image>
+        <view class="recommend-title">海岸线</view>
+      </view>
+      <view class="recommend-item">
+        <image src="/images/recommend4.jpg" mode="aspectFill" class="recommend-image"></image>
+        <view class="recommend-title">都市人像</view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 底部水印 -->
+  <view class="footer">
+    <text class="footer-text">© 2025 海风影像馆 Haifon</text>
+  </view>
+</view>
+
+<!-- 水印Canvas组件 -->
+<canvas canvas-id="watermarkCanvas" style="position: absolute; left: -9999px; top: -9999px;"></canvas> 

@@ -1,0 +1,167 @@
+/**index.wxss**/
+.container {
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+/* 轮播图区域 */
+.banner-section {
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+}
+
+.banner-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20rpx 30rpx;
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: bold;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+
+/* 视频号入口 */
+.video-channel-section {
+  padding: 30rpx;
+  margin-top: 20rpx;
+}
+
+.section-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  color: #333;
+}
+
+.video-channel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1296db;
+  color: #fff;
+  border-radius: 12rpx;
+  padding: 24rpx;
+  font-size: 32rpx;
+  box-shadow: 0 4rpx 12rpx rgba(18, 150, 219, 0.2);
+}
+
+.video-icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 16rpx;
+}
+
+/* 摄影热点 */
+.hot-topics-section {
+  padding: 30rpx;
+  margin-top: 20rpx;
+}
+
+.hot-topics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+}
+
+.hot-topic-item {
+  display: flex;
+  background-color: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+  padding: 0;
+}
+
+.topic-image {
+  width: 200rpx;
+  height: 160rpx;
+  flex-shrink: 0;
+}
+
+.topic-info {
+  padding: 20rpx;
+  flex: 1;
+}
+
+.topic-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.topic-desc {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 推荐作品 */
+.recommend-section {
+  padding: 30rpx;
+  margin-top: 20rpx;
+}
+
+.recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx;
+}
+
+.recommend-item {
+  position: relative;
+  border-radius: 12rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+}
+
+.recommend-image {
+  width: 100%;
+  height: 240rpx;
+  display: block;
+}
+
+.recommend-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+  padding: 16rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+
+/* 底部样式 */
+.footer {
+  text-align: center;
+  padding: 40rpx 0;
+  margin-top: 40rpx;
+}
+
+.footer-text {
+  font-size: 24rpx;
+  color: #999;
+} 
